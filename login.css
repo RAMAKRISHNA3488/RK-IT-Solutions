@@ -21,7 +21,7 @@ body{
 }
 
 body.active{
-    background-image: url(./Images/Background/background.jpg);
+    background-image: url(./Images/Background/Background.jpg);
 }
 .container{
     align-items: center;
