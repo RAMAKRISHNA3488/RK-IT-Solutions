@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login/Register</title>
         <link rel="stylesheet" href="login.css">
-        <link rel="icon" href="./Images/Restaurants/download.png" type="image/icon type">
+        <link rel="icon" href="./Images/Logo/OIP-removebg-preview.png" type="image/icon type">
     </head>
 <body>
     
@@ -23,12 +23,12 @@
         <div class="form signinform">
             <form>
                 <h2>RK IT Solutions</h2>
+                <h6>Username:admin, Password:admin</h6>
                 <h3>Sign In</h3>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <a href="home.html">
-                <input type="button" value="Login">
-                </a>
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <input type="button" onclick="login()" value="Login">
+
                 <a href="#" class="forgot">Forgot password?</a>
             </form>
         </div>
@@ -41,6 +41,7 @@
                 <input type="password" placeholder="Password">
                 <input type="password" placeholder="Confirm password">
                 <input type="submit" value="Sign Up">
+                <h6>No Need for Sign up</h6>
             </form>
         </div>
       </div>
@@ -59,6 +60,18 @@
         formbx.classList.remove('active')
         body.classList.remove('active')
     }
+
+
+    function login(){
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        if(username == 'admin' && password == 'admin'){
+            window.location.href = 'home.html';
+        }else{
+            alert('Login Failed');
+        }
+    }
+
     </script>
       
 </body>
